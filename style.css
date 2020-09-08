@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hideElement {
+    display: none;
+}
+
+body {
+    background-color: rgb(238, 228, 228);
+}
+
+main {
+    padding: 50px 20px 40px;
+}
+
+/*Nav Section*/
+
+nav {
+    width: 100%;
+    height: min-content;
+    background-color: gray;
+    position: fixed;
+    top: 0;
+}
+
+#logoSection {
+    width: 60%;
+    padding: 0px 20px;
+}
+
+#navButtonSection {
+    flex-wrap: nowrap;
+    width: 30%;
+}
+
+.navButton {
+    justify-content: center;
+    width: 33%;
+    height: 50px;
+    border-left: 1px black solid;
+    background-color: #615e5e;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.navButton:hover {
+    background-color: gainsboro;
+    color: black;
+}
+
+/*Rooms Section*/
+
+#roomSelect {
+    width: 300px;
+    height: 40px;
+    font-size: 18px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#roomSelect>option {
+    background-color: rgb(226, 223, 223);
+}
+
+/*Room Article*/
+
+#roomsSection {
+    width: 70%;
+}
+
+.roomArticle {
+    flex-wrap: nowrap;
+    justify-content: left;
+    width: 100%;
+    margin: 10px 0px;
+    background-color: whitesmoke;
+    border: solid 1px gray;
+    border-radius: 15px;
+}
+
+.roomImage {
+    width: 250px;
+    margin: 0px 20px;
+}
+
+.roomImage>img {
+    width: 100%;
+}
+
+.roomDescriptionDiv {
+    margin: 10px;
+}
+
+.roomName {
+    font-size: 37px;
+}
+
+.descriptionP {
+    font-size: 20px;
+    margin: 20px 0px;
+}
+
+.mainInfo {
+    width: 50%;
+}
+
+.additionalFeatures {
+    width: 30%;
+}
+
+.icons {
+    width: 30px;
+    margin: 0px 3px;
+}
+
+.additionalDescription {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 5px 0px;
+}
+
+/*Reservation Date*/
+
+#reservationDate {
+    justify-content: center;
+    width: 27%;
+    height: 300px;
+    position: fixed;
+    top: 150px;
+    right: 20px;
+    border: solid 1px gray;
+    border-radius: 15px;
+    background-color: rgb(219, 215, 228);
+}
+
+.dateText {
+    text-align: center;
+    width: 100%;
+}
+
+.modifyButtons {
+    justify-content: center;
+    width: 100%;
+}
+
+.modifyBtn, .valueInput {
+    text-align: center;
+    width: 60px;
+    height: 30px;
+    font-size: 25px;
+    border-radius: 5px;
+}
+
+#datesArticle {
+    justify-content: center;
+}
+
+.inputElement, .inputElement:disabled {
+    height: 30px;
+    padding: 0px 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#datesArticle>div {
+    justify-content: center;
+    margin: 0px 2px;
+    width: 45%;
+}
+
+#amountInput, #continueBtn {
+    width: 50%;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.valueInput, #amountInput {
+    background-color: white;
+    color: black;
+    opacity: 1;
+}
+
+.buttonColor, .buttonColor:disabled:hover {
+    background-color: rgb(164, 161, 170);
+    color: white;
+    text-shadow: -1px -1px 1px black;
+}
+
+.buttonColor:disabled {
+    opacity: 0.5;
+}
+
+.buttonColor:hover {
+    background-color: gray;
+}
+
+/*Form*/
+
+#reservationForm {
+    justify-content: center;
+    background-color: blue;
+    position: absolute;
+    width: 90%;
+    height: auto;  
+}
+form{
+    background-color: cadetblue;
+}
+
+#formTitle, #formButtons {
+    width: 100%;
+    background-color: chocolate;
+}
+#customerData, #roomInformation{
+    width: 49%;
+    margin: 2px;
+    background-color: violet;
+}
+.dataElement{
+    width: 45%;
+    margin: 10px;
+}
+.dataElement>input{
+    width: 100%;   
+}
+
+#formButtons{
+    justify-content: center;
+}
+
+
+/*footer*/
+
+.footer {
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: gray;
+}

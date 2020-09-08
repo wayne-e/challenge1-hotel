@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE CONTINENTAL | HOTEL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="flex">
+            <section id="logoSection" class="flex">
+                <h2>THE CONTINENTAL | HOTEL</h2>
+            </section>
+            <section id="navButtonSection" class="flex">
+                <div id="homeButton" class="flex navButton">INICIO</div>
+                <div id="reservationButton" class="flex navButton">RESERVAR</div>
+                <div id="showReservationsButton" class="flex navButton">VER RESERVAS</div>
+            </section>
+        </nav>
+    </header>
+    <main class="flex">
+        <section id="roomsSection">
+            <select id="roomSelect">
+                <option value="0">Seleccione Habitación</option>
+            </select>
+        </section>
+        <section id="reservationDate" class="flex">
+            <h3 class="dateText">Seleccione Noches:</h3>
+            <!--BOTONES-->
+            <div class="flex modifyButtons">
+                <button class="modifyBtn buttonColor" id="decreaseDayButton" type="button" value="-" disabled>-</button>
+                <input id="dayInput" class="valueInput" type="text" value="0" disabled />
+                <button class="modifyBtn buttonColor" id="increaseDayButton" type="button" value="+" disabled>+</button>
+            </div>
+            <article id="datesArticle" class="flex">
+                <div class="flex">
+                    <label for="initialDateInput" class="dateText">Día de Entrada:</label>
+                    <input type="date" class="inputElement" id="initialDateInput" value="dd-mm-yyyy" disabled>
+                </div>
+                <div class="flex">
+                    <label for="finalDateInput" class="dateText">Día de Salida:</label>
+                    <input type="date" class="inputElement" id="finalDateInput" value="dd-mm-yyyy" disabled>
+                </div>
+            </article>
+            <input type="text" id="amountInput" value="Costo Total" disabled />
+            <button type="submit" id="continueBtn" class="buttonColor" disabled>CONTINUAR</button>
+        </section>
+    </main>
+    <section id="reservationForm">
+        <h2 id="formTitle">THE CONTINENTAL | RESERVAR HABITACION</h2>
+        <form action="" class="flex">
+        <article id="customerData" class="flex">
+            <div class="flex dataElement">
+                <label for="customerNameInput">Nombre:</label>
+                <input type="text" id="customerNameInput" placeholder="Nombre(s)" class="inputElement"></div>
+                <div class="flex dataElement">
+                <label for="customerLastNameInput">Apellido:</label>
+                <input type="text" id="customerLastNameInput" placeholder="Apellido(s)" class="inputElement"></div>
+                <div class="flex dataElement">
+                <label for="customerEmailInput">Email:</label>
+                <input type="text" id="customerEmailInput" placeholder="Email" class="inputElement"></div>
+                <div class="flex dataElement">
+                <label for="customerCellphoneInput">Número Telefónico:</label>
+                <input type="text" id="customerCellphoneInput" placeholder="Número telefónico" class="inputElement"></div>
+                <div class="flex dataElement">
+                <label for="customerDocumentInput">Documento de identidad:</label>
+                <input type="text" id="customerDocumentInput" placeholder="Documento de identidad" class="inputElement"></div>
+                <div class="flex dataElement">
+                <label for="companionsDiv">Número de Personas:</label>
+                <div id="companionsDiv" class="flex modifyButtons">
+                    <button class="modifyBtn buttonColor" id="decreaseCompanions" type="button" value="-">-</button>
+                    <input id="companionsInput" class="valueInput" type="text" value="1" disabled />
+                    <button class="modifyBtn buttonColor" id="increaseCompanions" type="button" value="+">+</button>
+                </div>
+            </div>
+            <div class="flex dataElement">
+                <label for="initialDateForm">Día de Entrada:</label>
+                <input type="date" class="inputElement" id="initialDateForm" value="dd-mm-yyyy" disabled>
+            </div>
+            <div class="flex dataElement">
+                <label for="finalDateInputForm">Día de Salida:</label>
+                <input type="date" class="inputElement" id="finalDateInputForm" value="dd-mm-yyyy" disabled>
+            </div>
+            <div class="dataElement">
+                <label for="tvsDiv">Agregar TV a $25.00 por noche</label>
+                <div id="tvsDiv" class="flex modifyButtons">
+                    <button class="modifyBtn buttonColor" id="decreaseTV" type="button" value="-">-</button>
+                    <input id="tvsInput" class="valueInput" type="text" value="0" disabled />
+                    <button class="modifyBtn buttonColor" id="increaseTV" type="button" value="+">+</button>
+                </div>
+            </div>
+            <div class="dataElement">
+                <label for="bedsDiv">Agregar Cama a $50.00 por noche</label>
+                <div id="bedsDiv" class="flex modifyButtons">
+                    <button class="modifyBtn buttonColor" id="decreaseBeds" type="button" value="-">-</button>
+                    <input id="bedsInput" class="valueInput" type="text" value="0" disabled />
+                    <button class="modifyBtn buttonColor" id="increaseBeds" type="button" value="+">+</button>
+                </div>
+            </div>
+        </article>
+        <article id="roomInformation">
+            asass
+        </article>
+        <article id="formButtons" class="flex">
+            <button type="reset" id="goBackBtn">Volver</button>
+            <button type="submit" id="reserveBtn">Reservar Habitación</button>
+        </article>
+    </form>
+    </section>
+
+
+    <footer class="flex footer">
+        <h4>THE CONTINENTAL | HOTEL</h4>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
