@@ -169,6 +169,7 @@ nav {
 
 .inputElement, .inputElement:disabled {
     height: 30px;
+    width: 100%;
     padding: 0px 5px;
     font-size: 15px;
     border-radius: 5px;
@@ -233,9 +234,6 @@ form{
 .dataElement{
     width: 45%;
     margin: 10px;
-}
-.dataElement>input{
-    width: 100%;   
 }
 
 #formButtons{

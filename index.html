@@ -50,66 +50,103 @@
             <button type="submit" id="continueBtn" class="buttonColor" disabled>CONTINUAR</button>
         </section>
     </main>
+    <!--Form-->
     <section id="reservationForm">
         <h2 id="formTitle">THE CONTINENTAL | RESERVAR HABITACION</h2>
         <form action="" class="flex">
-        <article id="customerData" class="flex">
-            <div class="flex dataElement">
-                <label for="customerNameInput">Nombre:</label>
-                <input type="text" id="customerNameInput" placeholder="Nombre(s)" class="inputElement"></div>
-                <div class="flex dataElement">
-                <label for="customerLastNameInput">Apellido:</label>
-                <input type="text" id="customerLastNameInput" placeholder="Apellido(s)" class="inputElement"></div>
-                <div class="flex dataElement">
-                <label for="customerEmailInput">Email:</label>
-                <input type="text" id="customerEmailInput" placeholder="Email" class="inputElement"></div>
-                <div class="flex dataElement">
-                <label for="customerCellphoneInput">Número Telefónico:</label>
-                <input type="text" id="customerCellphoneInput" placeholder="Número telefónico" class="inputElement"></div>
-                <div class="flex dataElement">
-                <label for="customerDocumentInput">Documento de identidad:</label>
-                <input type="text" id="customerDocumentInput" placeholder="Documento de identidad" class="inputElement"></div>
-                <div class="flex dataElement">
-                <label for="companionsDiv">Número de Personas:</label>
-                <div id="companionsDiv" class="flex modifyButtons">
-                    <button class="modifyBtn buttonColor" id="decreaseCompanions" type="button" value="-">-</button>
-                    <input id="companionsInput" class="valueInput" type="text" value="1" disabled />
-                    <button class="modifyBtn buttonColor" id="increaseCompanions" type="button" value="+">+</button>
+            <!--RoomDetails-->
+            <article id="roomInformation">
+                <h2 class="roomName">${this._roomName}</h2>  
+                <div id="${this._roomId}" class="flex roomArticle">
+                    
+                    <figure class="flex roomImage">
+                        <img src="${this._roomImage}" alt="imagen">
+                    </figure>
+                    <div class="roomDescriptionDiv additionalFeatures">                                      
+                        <h3 class="additionalDescription">Caracteristicas:</h3>
+                        <h4 class="additionalDescription"><img class="icons" src="icons/4.png">Número de Personas: ${this._maxCompanions}</h4>
+                        <h4 class="additionalDescription"><img class="icons" src="icons/4.png">Camas:
+                            ${this._roomFeatures.beds}</h4>
+                        <h4 class="additionalDescription"><img class="icons" src="icons/4.png">Baños:
+                            ${this._roomFeatures.bathrooms}</h4>
+                        <h4 class="additionalDescription"><img class="icons" src="icons/1.png">TVs:
+                            ${this._roomFeatures.tvs}</h4>
+                        <h4 class="additionalDescription"><img class="icons" src="icons/2.png">Wifi:
+                            ${this._roomFeatures.wifi}</h4>
+                        <h4 class="additionalDescription"><img class="icons" src="icons/3.png">Room Service:
+                            ${this._roomFeatures.roomService}</h4>
+                        <h4 class="additionalDescription"><img class="icons" src="icons/5.png">Piscina:
+                            ${this._roomFeatures.pool}</h4>
+                    </div>
                 </div>
-            </div>
-            <div class="flex dataElement">
-                <label for="initialDateForm">Día de Entrada:</label>
-                <input type="date" class="inputElement" id="initialDateForm" value="dd-mm-yyyy" disabled>
-            </div>
-            <div class="flex dataElement">
-                <label for="finalDateInputForm">Día de Salida:</label>
-                <input type="date" class="inputElement" id="finalDateInputForm" value="dd-mm-yyyy" disabled>
-            </div>
-            <div class="dataElement">
-                <label for="tvsDiv">Agregar TV a $25.00 por noche</label>
-                <div id="tvsDiv" class="flex modifyButtons">
-                    <button class="modifyBtn buttonColor" id="decreaseTV" type="button" value="-">-</button>
-                    <input id="tvsInput" class="valueInput" type="text" value="0" disabled />
-                    <button class="modifyBtn buttonColor" id="increaseTV" type="button" value="+">+</button>
+            </article>
+            <!--CostumerData-->
+            <article id="customerData" class="flex">
+                <div class="flex dataElement">
+                    <label for="customerNameInput">Nombre:</label>
+                    <input type="text" id="customerNameInput" placeholder="Nombre(s)" class="inputElement"></div>
+                <div class="flex dataElement">
+                    <label for="customerLastNameInput">Apellido:</label>
+                    <input type="text" id="customerLastNameInput" placeholder="Apellido(s)" class="inputElement"></div>
+                <div class="flex dataElement">
+                    <label for="customerEmailInput">Email:</label>
+                    <input type="text" id="customerEmailInput" placeholder="Email" class="inputElement"></div>
+                <div class="flex dataElement">
+                    <label for="customerCellphoneInput">Número Telefónico:</label>
+                    <input type="text" id="customerCellphoneInput" placeholder="Número telefónico" class="inputElement">
                 </div>
-            </div>
-            <div class="dataElement">
-                <label for="bedsDiv">Agregar Cama a $50.00 por noche</label>
-                <div id="bedsDiv" class="flex modifyButtons">
-                    <button class="modifyBtn buttonColor" id="decreaseBeds" type="button" value="-">-</button>
-                    <input id="bedsInput" class="valueInput" type="text" value="0" disabled />
-                    <button class="modifyBtn buttonColor" id="increaseBeds" type="button" value="+">+</button>
+                <div class="flex dataElement">
+                    <label for="customerDocumentInput">Documento de identidad:</label>
+                    <input type="text" id="customerDocumentInput" placeholder="Documento de identidad"
+                        class="inputElement">
                 </div>
-            </div>
-        </article>
-        <article id="roomInformation">
-            Aquí se ubica la información de la Habitación
-        </article>
-        <article id="formButtons" class="flex">
-            <button type="reset" id="goBackBtn">Volver</button>
-            <button type="submit" id="reserveBtn">Reservar Habitación</button>
-        </article>
-    </form>
+                <div class="flex dataElement">
+                    <label for="customerCardInput">Tarjeta de Crédito o Débito:</label>
+                    <input type="text" id="customerCardInput" placeholder="Número de Tarjeta" class="inputElement">
+                </div>
+                <div class="flex dataElement">
+                    <label for="initialDateForm">Día de Entrada:</label>
+                    <input type="date" class="inputElement" id="initialDateForm" value="dd-mm-yyyy" disabled>
+                </div>
+                <div class="flex dataElement">
+                    <label for="finalDateInputForm">Día de Salida:</label>
+                    <input type="date" class="inputElement" id="finalDateInputForm" value="dd-mm-yyyy" disabled>
+                </div>
+                <div class="flex dataElement">
+                    <label for="companionsDiv">Número de Personas:</label>
+                    <div id="companionsDiv" class="flex modifyButtons">
+                        <button class="modifyBtn buttonColor" id="decreaseCompanions" type="button" value="-">-</button>
+                        <input id="companionsInput" class="valueInput" type="text" value="1" disabled />
+                        <button class="modifyBtn buttonColor" id="increaseCompanions" type="button" value="+">+</button>
+                    </div>
+                </div>
+                <div class="dataElement">
+                    <label for="tvsDiv">Agregar TV a $25.00 por noche</label>
+                    <div id="tvsDiv" class="flex modifyButtons">
+                        <button class="modifyBtn buttonColor" id="decreaseTV" type="button" value="-">-</button>
+                        <input id="tvsInput" class="valueInput" type="text" value="0" disabled />
+                        <button class="modifyBtn buttonColor" id="increaseTV" type="button" value="+">+</button>
+                    </div>
+                </div>
+                <div class="dataElement">
+                    <label for="bedsDiv">Agregar Cama a $50.00 por noche</label>
+                    <div id="bedsDiv" class="flex modifyButtons">
+                        <button class="modifyBtn buttonColor" id="decreaseBeds" type="button" value="-">-</button>
+                        <input id="bedsInput" class="valueInput" type="text" value="0" disabled />
+                        <button class="modifyBtn buttonColor" id="increaseBeds" type="button" value="+">+</button>
+                    </div>
+                </div>
+                <div class="flex dataElement">
+                    <label for="finalPriceInput">Precio Total:</label>
+                    <input type="text" id="finalPriceInput" placeholder="Precio" class="inputElement">
+                </div>
+            </article>
+            <!--FormButtons-->
+            <article id="formButtons" class="flex">
+                <button type="reset" id="goBackBtn">Volver</button>
+                <button type="submit" id="reserveBtn">Reservar Habitación</button>
+            </article>
+        </form>
     </section>
 
 
