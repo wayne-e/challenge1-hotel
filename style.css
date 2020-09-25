@@ -23,6 +23,11 @@ main {
     padding: 50px 20px 40px;
 }
 
+span{
+    font-weight: bold;
+    color: rgb(144, 75, 139);
+}
+
 /*Nav Section*/
 
 nav {
@@ -73,11 +78,12 @@ nav {
     background-color: rgb(226, 223, 223);
 }
 
-/*Room Article*/
 
 #roomsSection {
     width: 70%;
 }
+
+/*Room Article*/
 
 .roomArticle {
     flex-wrap: nowrap;
@@ -120,7 +126,7 @@ nav {
 }
 
 .icons {
-    width: 30px;
+    width: 25px;
     margin: 0px 3px;
 }
 
@@ -145,22 +151,18 @@ nav {
     background-color: rgb(219, 215, 228);
 }
 
-.dateText {
-    text-align: center;
-    width: 100%;
-}
-
-.modifyButtons {
+.modifyButtonsDiv {
     justify-content: center;
     width: 100%;
 }
 
-.modifyBtn, .valueInput {
-    text-align: center;
+.buttonElement {
     width: 60px;
+    text-align: center;
     height: 30px;
     font-size: 25px;
     border-radius: 5px;
+    background-color: white;
 }
 
 #datesArticle {
@@ -182,70 +184,99 @@ nav {
     width: 45%;
 }
 
-#amountInput, #continueBtn {
-    width: 50%;
-    height: 30px;
-    border-radius: 5px;
+#amountLabel{
+    width: 100%;
     text-align: center;
+    font-size: 18px;
 }
 
-.valueInput, #amountInput {
-    background-color: white;
-    color: black;
-    opacity: 1;
+#continueBtn {
+    width: 50%;
 }
 
-.buttonColor, .buttonColor:disabled:hover {
+.buttonColor {
+    padding: 5px 10px;
+    height: 30px;
     background-color: rgb(164, 161, 170);
     color: white;
     text-shadow: -1px -1px 1px black;
+    border-radius: 5px;
+    font-size: 15px;
+    text-align: center;
 }
 
 .buttonColor:disabled {
     opacity: 0.5;
 }
 
-.buttonColor:hover {
+.buttonColor:enabled:hover {
     background-color: gray;
 }
 
 /*Form*/
 
-#reservationForm {
-    justify-content: center;
-    background-color: blue;
+#formSection, .blackBackground {
     position: absolute;
-    width: 90%;
-    height: auto;  
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
-form{
-    background-color: cadetblue;
+
+.blackBackground {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+form {
+    justify-content: center;
+    background-color: rgb(238, 228, 228);
+    position: relative;
+    width: 90%;
+    height: auto;
+    margin: 3% auto;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 #formTitle, #formButtons {
     width: 100%;
-    background-color: chocolate;
+    padding: 5px;
 }
-#customerData, #roomInformation{
+
+#formTitle{
+    background-color: grey;
+}
+
+#customerData, #roomInformation {
     width: 49%;
     margin: 2px;
-    background-color: violet;
 }
-.dataElement{
+
+.dataElement {
     width: 45%;
     margin: 10px;
 }
 
-#formButtons{
+#formButtons {
+    justify-content: space-between;
+    border-top: solid 1px blueviolet;
+    padding-top: 10px;
+}
+
+#finalPriceDiv {
     justify-content: center;
 }
 
+.formBtn{
+    background-color: rgb(179, 154, 182);
+}
 
 /*footer*/
 
 .footer {
     justify-content: center;
-    position: absolute;
+    position: static;
     bottom: 0;
     width: 100%;
     height: 40px;
